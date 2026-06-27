@@ -33,13 +33,11 @@ This project is built as an **intelligent workflow** that combines traditional l
    ```
 
 ## Sample Code
-
 <img width="1366" height="683" alt="table_messy_code_1" src="https://github.com/user-attachments/assets/4cc8a58b-ab1f-4e59-a81c-13b9b476a957" />
 
 <img width="1366" height="732" alt="table_messy_code_2" src="https://github.com/user-attachments/assets/00a01308-25ea-43aa-ae3b-386f040fc519" />
 
-## challenges you ran into :
-
+## challenges you ran into:
 1. **Switching from Ollama to Gemini API**: 
    * *The Problem*: I originally wanted to build this agent using a completely local model running on my computer via Ollama . However, I ran into two major roadblocks: local models require massive computer hardware resources (GPU/RAM) to process files smoothly, and smaller local models frequently struggle with reliable multi-step tool use (function calling). The local model would often hallucinate tool arguments or fail to realize it needed to run a web search.
    * *The fix*:use the Google GenAI SDK (`Gemini`). Cloud models have much stronger reasoning capabilities, handle tool call parameters perfectly, and don't slow down my local system's performance.
