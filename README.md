@@ -46,7 +46,7 @@ This project is built as an **intelligent workflow** that combines traditional l
    
 ## future improvements :
 If I had more time :
-* I would build a file-patching feature. This would allow the agent to automatically modify and rewrite the secure code fixes directly back into the script on your computer after you approve the suggestion in the chat. and improve the chat bar better (Fix for Context Length Truncation  and more fixes for sure) ,
+* I would build a file-patching feature. This would allow the agent to automatically modify and rewrite the secure code fixes directly back into the script on the computer after approving the suggestion in the chat. and improve the chat bar better (Fix for Context Length Truncation  and more fixes for sure) ,
 * Reviewing Whole Folders ,
 * Specialist Sub-Agents by multiple smaller agents in parallel—one focusing only on performance, one only on security, and one final "Coordinator" agent to clean up their notes and draw the final table.
 
