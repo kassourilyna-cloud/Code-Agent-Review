@@ -31,17 +31,21 @@ This project is built as an **intelligent workflow** that combines traditional l
    ```cmd
    python agent.py messy_code.py
    ```
+
 ##Sample Code
+
 <img width="1366" height="683" alt="table_messy_code_1" src="https://github.com/user-attachments/assets/4cc8a58b-ab1f-4e59-a81c-13b9b476a957" />
 
 <img width="1366" height="732" alt="table_messy_code_2" src="https://github.com/user-attachments/assets/00a01308-25ea-43aa-ae3b-386f040fc519" />
 
 ##challenges you ran into :
+
 1. **Switching from Ollama to Gemini API**: 
    * *The Problem*: I originally wanted to build this agent using a completely local model running on my computer via Ollama . However, I ran into two major roadblocks: local models require massive computer hardware resources (GPU/RAM) to process files smoothly, and smaller local models frequently struggle with reliable multi-step tool use (function calling). The local model would often hallucinate tool arguments or fail to realize it needed to run a web search.
    * *The fix*:use the Google GenAI SDK (`Gemini`). Cloud models have much stronger reasoning capabilities, handle tool call parameters perfectly, and don't slow down my local system's performance.
 2. **Managing Free-Tier API Limits**: Having the AI run its own tools back and forth used up the free 20-requests-per-day limit almost instantly. I solved this by changing the code to run Ruff and Bandit locally on my computer first, then passing those logs to Gemini all at once. This reduced the API calls to just 2 requests per run, letting me test the agent much longer.
 3. **Fixing the Chat Memory Bug**: When adding the chat feature, a bug appeared where the AI would get confused and only show one bug instead of all of them. This happened because the command forcing the AI to format the final table leaked into the chat's active memory history. I fixed this by copying the chat history snapshot cleanly before formatting the table, keeping the live chat session separate and smart.
+   
 ##future improvements :
 If I had more time, I would build a file-patching feature. This would allow the agent to automatically modify and rewrite the secure code fixes directly back into the script on your computer after you approve the suggestion in the chat. and improve the chat bar better (Fix for Context Length Truncation  and more fixes for sure)
 
