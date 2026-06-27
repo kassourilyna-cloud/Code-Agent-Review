@@ -45,9 +45,10 @@ This project is built as an **intelligent workflow** that combines traditional l
 3. **Fixing the Chat Memory Bug**: When adding the chat feature, a bug appeared where the AI would get confused and only show one bug instead of all of them. This happened because the command forcing the AI to format the final table leaked into the chat's active memory history. I fixed this by copying the chat history snapshot cleanly before formatting the table, keeping the live chat session separate and smart.
    
 ## future improvements :
-If I had more time, I would build a file-patching feature. This would allow the agent to automatically modify and rewrite the secure code fixes directly back into the script on your computer after you approve the suggestion in the chat. and improve the chat bar better (Fix for Context Length Truncation  and more fixes for sure) ,
-Reviewing Whole Folders ,
-Specialist Sub-Agents by multiple smaller agents in parallel—one focusing only on performance, one only on security, and one final "Coordinator" agent to clean up their notes and draw the final table.
+If I had more time :
+* I would build a file-patching feature. This would allow the agent to automatically modify and rewrite the secure code fixes directly back into the script on your computer after you approve the suggestion in the chat. and improve the chat bar better (Fix for Context Length Truncation  and more fixes for sure) ,
+* Reviewing Whole Folders ,
+* Specialist Sub-Agents by multiple smaller agents in parallel—one focusing only on performance, one only on security, and one final "Coordinator" agent to clean up their notes and draw the final table.
 
 
 
