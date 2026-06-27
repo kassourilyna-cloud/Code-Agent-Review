@@ -23,14 +23,14 @@ This project is built as an **intelligent workflow** that combines traditional l
    cd "C:\Users\ZED\Desktop\Code Review Agent"
    
 2. Set your Gemini API key in your terminal environment:
-  ```cmd
+   ```cmd
    set GEMINI_API_KEY=your_actual_api_key_here
-  ```
+   ```
 
 3. Run the agent by passing the path of the Python file you want to review:
- ```cmd
+  ```cmd
   python agent.py messy_code.py
- ```
+  ```
 
 ##Sample Code Review
 
